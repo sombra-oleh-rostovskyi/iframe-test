@@ -13,7 +13,7 @@ Receiving iframe.
 <script>
   window.addEventListener('message', function(event) {
   console.log(event);
-  alert(`Received ${event.data} from ${event.origin}`);
+  console.log(event.data);
 });
 </script>
 
