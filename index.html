@@ -16,27 +16,14 @@ Testing iframe
 </form>
 <button onclick="testPost()">BUTTON</button>
 <script>
+    let mockPayload = {
+        speed: 100,
+        latency: 3,
+    }
     form.onsubmit = function() {
-      console.log('submit');
-      console.log(this.message.value);
+        console.log(mockPayload);
       window.parent.postMessage(this.message.value, '*');
     };
-    function testMessage() {
-        console.log('test222');
-        window.parent.postMessage('test message', '*');
-        setTimeout(() => {
-        console.log('test setTimeout');
-        window.postMessage('asdasdasd', '*');
-     }, 3000);
-    };
-    
-    testMessage();
-    
-    function testPost() {
-        console.log('test button click');
-        window.parent.postMessage('test message', '*');
-        window.postMessage('test message', '*');
-    }
 </script>
 
 </body>
