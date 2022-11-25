@@ -11,9 +11,17 @@
 Receiving iframe.
 </div>
 <script>
+    function testMessage() {
+        console.log('test222');
+        window.postMessage('asdasdasd', '*');
+        setTimeout(() => {
+        window.postMessage('asdasdasd', '*');
+     }, 3000);
+    }
      setTimeout(() => {
         window.postMessage('asdasdasd', '*');
      }, 3000);
+    testMessage();
 </script>
 
 </body>
