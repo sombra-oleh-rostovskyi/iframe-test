@@ -16,7 +16,9 @@ Testing iframe
 </form>
 <script>
     form.onsubmit = function() {
-      window.postMessage(this.message.value, '*');
+        console.log('submit');
+         console.log(this.message.value);
+      window.parent.postMessage(this.message.value, '*');
     };
     function testMessage() {
         console.log('test222');
