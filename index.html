@@ -11,9 +11,10 @@
 Receiving iframe.
 </div>
 <script>
-  window.addEventListener('message', function(event) {
-  console.log(event);
-  console.log(event.data);
+    setTimeout(() => {
+       window.postMessage('asdasdasd', '*');
+    }, 3000);
+
 });
 </script>
 
