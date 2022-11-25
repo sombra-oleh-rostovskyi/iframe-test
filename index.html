@@ -8,9 +8,16 @@
 
 <body>
 <div style="color: white">
-Receiving iframe.
+Testing iframe
 </div>
+<form id="form">
+<input type="text" placeholder="Enter message" name="message">
+<input type="submit" value="Click to send">
+</form>
 <script>
+    form.onsubmit = function() {
+      window.postMessage(this.message.value, '*');
+    };
     function testMessage() {
         console.log('test222');
         window.postMessage('asdasdasd', '*');
