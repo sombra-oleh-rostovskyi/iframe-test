@@ -44,7 +44,7 @@ Testing iframe
         console.log('postMessage call');
         window.parent.postMessage(mockPayload, '*');
         setTimeout(
-          function() {
+          () => {
           console.log('set timeout');
           window.parent.postMessage(mockPayload, '*');
         }, 5000);
