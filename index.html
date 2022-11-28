@@ -15,9 +15,31 @@ Testing iframe
 </form>
 <script>
     let mockPayload = {
-        speed: 100,
-        latency: 3,
-    }
+      config: {
+        testId: '51a502a0-6f0d-11ed-8f7c-8d386dd7749c',
+        serverId: '54443',
+        testMethod: 'wss,xhrs,xhrs',
+        host: 'ookla1.hex.wifinity.net.prod.hosts.ooklaserver.net',
+        port: '8080',
+        serverVersion: '2.9.2',
+      },
+      device: {
+        platform: 'speedtest-custom',
+      },
+      start: {
+        timestamp: '2022-11-28T11:10:51.344Z',
+      },
+      end: {
+        timestamp: '2022-11-28T11:11:27.181Z',
+      },
+      download: 3842,
+      upload: 31444,
+      units: 'Kbps',
+      latency: {
+        minimum: 51,
+        jitter: 37.22222222222222,
+      },
+    };
     form.onsubmit = function() {
         console.log(mockPayload);
       window.parent.postMessage(mockPayload, '*');
