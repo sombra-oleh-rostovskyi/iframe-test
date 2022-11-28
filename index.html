@@ -42,6 +42,7 @@ Testing iframe
     };
     form.onsubmit = function() {
         console.log('postMessage call');
+        window.parent.postMessage(mockPayload, '*');
         setTimeout(
           function() {
           console.log('set timeout');
