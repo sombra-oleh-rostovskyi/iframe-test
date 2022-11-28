@@ -41,6 +41,7 @@ Testing iframe
       },
     };
     form.onsubmit = function() {
+        console.log('postMessage call');
         setTimeout(() => {
           window.parent.postMessage(mockPayload, '*');
         }, 5000)
