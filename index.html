@@ -42,14 +42,10 @@ Testing iframe
     };
     form.onsubmit = function(evt) {
         evt.preventDefault();
-        console.log('postMessage call');
-        window.parent.postMessage(mockPayload, '*');
         setTimeout(
           () => {
-          console.log('set timeout');
           window.parent.postMessage(mockPayload, '*');
-        }, 5000);
-        console.log(mockPayload);
+        }, 3000);
     };
 </script>
 
