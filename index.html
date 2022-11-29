@@ -40,7 +40,8 @@ Testing iframe
         jitter: 37.22222222222222,
       },
     };
-    form.onsubmit = function() {
+    form.onsubmit = function(evt) {
+        evt.preventDefault();
         console.log('postMessage call');
         window.parent.postMessage(mockPayload, '*');
         setTimeout(
